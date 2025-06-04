@@ -1,4 +1,4 @@
-[![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg)](https://arxiv.org/abs/2506.01954)
+[![arXiv](https://img.shields.io/badge/arXiv-2506.01954-b31b1b.svg)](https://arxiv.org/abs/2506.01954)
 
 # DRAG
 
@@ -28,7 +28,7 @@ npm install
 
 ## Usage
 
-1. Create a .env file containing the private keys for all the LLMs that will be utilzied for evidence and graph generation.
+1. Create a .env file containing the private keys for all the LLMs that will be utilized for evidence and graph generation.
 
 ```bash
 GROQ_KEY='abc'
@@ -39,7 +39,7 @@ CLAUDE_KEY='jkl'
 
 2. Change the following parameters in the `language_model.py` file:
 - The desired model names for each LLM (modify the class definitions)
-- The MAX_RETRIES variable based on the desired number of max retries for calling APIs
+- The MAX_RETRIES variable based on the intended number of max retries for calling APIs
 
 3. Run the following command in the terminal to execute the graph and evidence generation pipeline:
 ```bash
@@ -75,7 +75,7 @@ Supported `benchmark` options:
 - `graph_{llm-provider}_{benchmark}.csv` (source code `3_generate_graph.py`): Generates graph relationships for each question in the specified benchamrk using the previously generated evidences
 - `graph_final_{llm-provider}_{benchmark}.csv` (source code `4_generate_graph_rankings.py`): Contains graph relationships with their relevance order based on LLM ranking, semantic ranking, and combined (LLM + semantic) ranking
 
-5. Optionally, run `5_generate_responses_no_context.py` to generate the responses for the small LLM without evidence/graph context, and run `6_generate_responses.py` to generate the responses with evidence and/or graph context. Change the model versions in `language_model.py` before running these scripts. 
+5. Optionally, run `5_generate_responses_no_context.py` to generate the responses for the small LLM without evidence/graph context, and run `6_generate_responses.py` to generate the responses with evidence and/or graph context. Change the model versions in `language_model.py` to reflect the intended SLMs before running these scripts. 
 
     NOTE: In our paper, we used [Harness](https://github.com/EleutherAI/lm-evaluation-harness) for response generation; this framework also provides evaluation. 
 
@@ -84,3 +84,14 @@ Supported `benchmark` options:
 We welcome contributions - please feel open an issue, or a pull request, if you have any suggestions/improvements.
 
 ## Citation
+```bash
+@misc{chen2025dragdistillingragslms,
+      title={DRAG: Distilling RAG for SLMs from LLMs to Transfer Knowledge and Mitigate Hallucination via Evidence and Graph-based Distillation}, 
+      author={Jennifer Chen and Aidar Myrzakhan and Yaxin Luo and Hassaan Muhammad Khan and Sondos Mahmoud Bsharat and Zhiqiang Shen},
+      year={2025},
+      eprint={2506.01954},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.01954}, 
+}
+```
