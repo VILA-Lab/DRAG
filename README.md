@@ -1,6 +1,8 @@
+[![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg)](https://arxiv.org/abs/2506.01954)
+
 # DRAG
 
-Code for the paper "DRAG: Distilling RAG for SLMs from LLMs to Transfer Knowledge and Mitigate Hallucination via Evidence and Graph-based Distillation (ACL 2025 Main)."
+Code for the paper "DRAG: Distilling RAG for SLMs from LLMs to Transfer Knowledge and Mitigate Hallucination via Evidence and Graph-based Distillation" (ACL 2025 Main).
 
 ## Table of Contents
 
@@ -16,6 +18,13 @@ Code for the paper "DRAG: Distilling RAG for SLMs from LLMs to Transfer Knowledg
 
 RAG methods have proven effective for tasks requiring factual consistency and robust knowledge retrieval. However, large-scale RAG systems are prone to generating "hallucinated" content. This repo provides the code to run DRAG, a novel framework for distilling RAG knowledge from large-scale Language Models (LLMs) into small LMs (SLMs). Our approach leverages evidence- and knowledge graph–based distillation, ensuring that the distilled model retains critical factual knowledge while significantly reducing model size and computational cost. By aligning the smaller model's predictions with a structured knowledge graph and ranked evidence, DRAG effectively mitigates hallucinations and improves factual accuracy. Experimental evaluations on multiple benchmarks demonstrate that our method outperforms the prior competitive RAG methods like MiniRAG for SLMs by up to 27.7% using the same models, preserving high-level efficiency and reliability.
 
+## Getting Started
+
+```bash
+git clone https://github.com/VILA-Lab/DRAG.git
+cd DRAG
+npm install
+```
 
 ## Usage
 
